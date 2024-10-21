@@ -1,0 +1,46 @@
+{
+  "session_id": "6cc44479-7e7f-4f1b-90a3-11cc183670cf",
+  "accounts": [
+    {
+      "account_id": {
+        "iban": "FI2439390058811110",
+        "other": null
+      },
+      "all_account_ids": [
+        {
+          "identification": "FI2439390058811110",
+          "scheme_name": "IBAN",
+          "issuer": null
+        }
+      ],
+      "account_servicer": null,
+      "name": "MAKKONEN MARJA-LIISA",
+      "details": null,
+      "usage": "PRIV",
+      "cash_account_type": "CACC",
+      "product": "TESTITILI",
+      "currency": "EUR",
+      "psu_status": null,
+      "credit_limit": null,
+      "uid": "9fd5eab6-750e-4ec1-9d28-ef8456d15023",
+      "identification_hash": "WwpbCiJhY2NvdW50IiwKImFjY291bnRfaWsdfLAoiaWJhbiIKXSwKWwoiYWNjb3VudCIsCiJjdXJyZW5jeSIKXQpd.FPgR1ZhFiDseBx1pF2nWUGLaN+mvrxcFxzcChS3GZMY=",
+      "identification_hashes": [
+        "WwpbCiJhY2NvdW50IiwKImFjY291bnRfaWQiLAoiaWJhbiIKXQpd.Y17SsdfTt/qlablPvhMlhRMnm2MsCZcs9FvQy4Syd4Do=",
+        "WwpbCiJhY2NvdW50IiwKImFjY291bnRfaWQiLAoiaWJhbiIKXSwKWwoiYsdfjb3VudCIsCiJjdXJyZW5jeSIKXQpd.FPgR1ZhFiDseBx1pF2nWUGLaN+mvrxcFxzcChS3GZMY=",
+        "WwpbCiJhc3BzcF9uYW1lIgpdLApbCiJhc3BzcF9jb3VudHJ5IgpdLApbCiJhY2NvdW50IiwKInJlc291cmNlX2lkIgpdsdf0=.cXjsruuvM5LOzK7xYgXEryJqhYKuSk7BCwkbAqZUnCw=",
+        "WwpbCiJhc3BzcF9uYW1lIgpdLApbCiJhc3BzcF9jb3VudHJ5IgpdLApbCasd2NvdW50IiwKIm5hbWUiCl0KXQ==.SRwCm0RIBT0AFY/Ld/M67GI6cADRlr/iuZRbVaN0S6c="
+      ]
+    }
+  ],
+  "aspsp": {
+    "name": "S-Pankki",
+    "country": "FI"
+  },
+  "psu_type": "business",
+  "access": {
+    "accounts": null,
+    "balances": true,
+    "transactions": true,
+    "valid_until": "2024-11-26T05:16:41.977681Z"
+  }
+}

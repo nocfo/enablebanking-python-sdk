@@ -1,0 +1,456 @@
+{
+  "aspsps": [
+    {
+      "name": "Aktia",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Aktia/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "credentials": [
+            {
+              "name": "userId",
+              "title": "User ID",
+              "required": true,
+              "description": "User ID for Aktia Internet bank"
+            },
+            {
+              "name": "password",
+              "title": "Password",
+              "required": true,
+              "description": "Password for Aktia Internet bank"
+            }
+          ],
+          "approach": "DECOUPLED",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 3600,
+      "beta": false,
+      "bic": "HELSFIHH"
+    },
+    {
+      "name": "DNB",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/DNB/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "credentials": [
+            {
+              "name": "companyId",
+              "title": "User ID",
+              "required": true,
+              "description": "Organisation ID in the format TBxxxxx, TXxxxxx, TUxxxxx or NUxxxxx",
+              "template": "^((T|N)(B|X|U)\\d{5})$"
+            }
+          ],
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false,
+      "bic": "DNBAFIHX",
+      "required_psu_headers": ["psu-ip-address"]
+    },
+    {
+      "name": "N26",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/N26/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": false
+    },
+    {
+      "name": "Nordea Corporate",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Nordea%20Corporate/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "name": "MTA",
+          "title": "Nordea website",
+          "psu_type": "business",
+          "credentials": [
+            {
+              "name": "companyId",
+              "title": "Agreement number",
+              "required": true,
+              "description": "Agreement number for Nordea Corporate Netbank"
+            }
+          ],
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": true,
+      "bic": "NDEAFIHH"
+    },
+    {
+      "name": "OP",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/OP/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": false,
+      "bic": "OKOYFIHH"
+    },
+    {
+      "name": "POP Pankki",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/POP%20Pankki/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": false,
+      "bic": "POPFFI22"
+    },
+    {
+      "name": "S-Pankki",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/S-Pankki/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false,
+      "bic": "SBANFIHH"
+    },
+    {
+      "name": "Revolut",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Revolut/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false,
+      "bic": "REVOLT21"
+    },
+    {
+      "name": "Handelsbanken",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Handelsbanken/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "name": "REDIRECT",
+          "title": "Redirect",
+          "psu_type": "business",
+          "credentials": [
+            {
+              "name": "companyId",
+              "title": "Company ID",
+              "required": true,
+              "description": "Business identity code which is displayed in the Corporate Internet bank settings"
+            }
+          ],
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": false,
+      "bic": "HANDFIHH",
+      "required_psu_headers": ["psu-ip-address"]
+    },
+    {
+      "name": "S\u00e4\u00e4st\u00f6pankki",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/S%C3%A4%C3%A4st%C3%B6pankki/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": false,
+      "bic": "ITELFIHH"
+    },
+    {
+      "name": "Oma S\u00e4\u00e4st\u00f6pankki",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Oma%20S%C3%A4%C3%A4st%C3%B6pankki/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": false,
+      "bic": "ITELFIHH"
+    },
+    {
+      "name": "Danske Bank",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Danske%20Bank/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": false,
+      "bic": "DABAFIHH"
+    },
+    {
+      "name": "Holvi",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Holvi/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "credentials": [
+            {
+              "name": "userId",
+              "title": "E-mail",
+              "required": true,
+              "description": "E-mail used for authenticating to Holvi"
+            },
+            {
+              "name": "password",
+              "title": "Password",
+              "required": true,
+              "description": "Password used for authenticating to Holvi"
+            }
+          ],
+          "approach": "DECOUPLED",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false,
+      "bic": "HOLVFIHH"
+    },
+    {
+      "name": "Nordea",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Nordea/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "name": "MTA",
+          "title": "Nordea website",
+          "psu_type": "business",
+          "credentials": [
+            {
+              "name": "companyId",
+              "title": "Company ID",
+              "required": true,
+              "description": "Business identity code (Y-tunnus) in 1234567-8 format",
+              "template": "^\\d{7}-\\d$"
+            }
+          ],
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": false,
+      "bic": "NDEAFIHH"
+    },
+    {
+      "name": "Eurocard",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Eurocard/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "name": "REDIRECT",
+          "title": "Redirect",
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false
+    },
+    {
+      "name": "OP Corporate Gold Card",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/OP%20Corporate%20Gold%20Card/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "name": "REDIRECT",
+          "title": "Redirect",
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false
+    },
+    {
+      "name": "bunq",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/bunq/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false
+    },
+    {
+      "name": "Wise",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Wise/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false,
+      "bic": "TRWIBEBB"
+    },
+    {
+      "name": "PayPal",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/PayPal/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": false
+    },
+    {
+      "name": "SweepBank",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/SweepBank/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false,
+      "bic": "FEMAMTMTXXX"
+    },
+    {
+      "name": "Ferratum Bank",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Ferratum%20Bank/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": true,
+      "bic": "FEMAMTMTXXX"
+    },
+    {
+      "name": "American Express",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/American%20Express/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 7776000,
+      "beta": false
+    },
+    {
+      "name": "Pleo",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Pleo/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": true,
+      "bic": "PLEODKK2"
+    },
+    {
+      "name": "Nordea First Card",
+      "country": "FI",
+      "logo": "https://enablebanking.com/brands/FI/Nordea/",
+      "psu_types": ["business"],
+      "auth_methods": [
+        {
+          "psu_type": "business",
+          "approach": "REDIRECT",
+          "hidden_method": false
+        }
+      ],
+      "maximum_consent_validity": 15552000,
+      "beta": true,
+      "bic": "NDEAFIHH"
+    }
+  ]
+}

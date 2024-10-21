@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "enable-banking-py"
+version = "0.1.0"
+description = ""
+authors = ["NOCFO <team@nocfo.io>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+pyjwt = "^2.9.0"
+pydantic = "^2.9.2"
+cryptography = "^43.0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+mypy = "^1.13.0"
+types-requests = "^2.32.0.20241016"
+ruff = "^0.7.2"
+commentjson = "^0.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

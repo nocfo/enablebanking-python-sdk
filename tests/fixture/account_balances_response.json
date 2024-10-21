@@ -1,0 +1,26 @@
+{
+  "balances": [
+    {
+      "name": "Net balance",
+      "balance_amount": {
+        "currency": "EUR",
+        "amount": "2107.45"
+      },
+      "balance_type": "ITAV",
+      "last_change_date_time": null,
+      "reference_date": null,
+      "last_committed_transaction": null
+    },
+    {
+      "name": "Gross balance",
+      "balance_amount": {
+        "currency": "EUR",
+        "amount": "2107.45"
+      },
+      "balance_type": "ITBD",
+      "last_change_date_time": null,
+      "reference_date": null,
+      "last_committed_transaction": null
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "transactions": [
+    {
+      "entry_reference": "202402025EQEL1052327",
+      "merchant_category_code": null,
+      "transaction_amount": {
+        "currency": "EUR",
+        "amount": "5.20"
+      },
+      "creditor": {
+        "name": "GOOGLE*GSUITE ENALA CC GOOGLE.COM",
+        "postal_address": null,
+        "organisation_id": null,
+        "private_id": null,
+        "contact_details": null
+      },
+      "creditor_account": null,
+      "creditor_agent": null,
+      "debtor": null,
+      "debtor_account": null,
+      "debtor_agent": null,
+      "bank_transaction_code": {
+        "description": "PKORTTIMAKSU",
+        "code": null,
+        "sub_code": null
+      },
+      "credit_debit_indicator": "DBIT",
+      "status": "BOOK",
+      "booking_date": "2024-02-02",
+      "value_date": "2024-02-02",
+      "transaction_date": "2024-02-02",
+      "balance_after_transaction": null,
+      "reference_number": null,
+      "remittance_information": [
+        "492025******5323    OSTOPVM  240201\nMF NRO 74697694033920041360051\nVARMENTAJA 400"
+      ],
+      "debtor_account_additional_identification": null,
+      "creditor_account_additional_identification": null,
+      "exchange_rate": null,
+      "note": null,
+      "transaction_id": null
+    },
+    {
+      "entry_reference": "202312195FVT00312044",
+      "merchant_category_code": null,
+      "transaction_amount": {
+        "currency": "EUR",
+        "amount": "1752.38"
+      },
+      "creditor": {
+        "name": "Pohjola Vakuutus Oy",
+        "postal_address": null,
+        "organisation_id": null,
+        "private_id": null,
+        "contact_details": null
+      },
+      "creditor_account": {
+        "iban": "FI7150000120001820",
+        "other": null
+      },
+      "creditor_agent": null,
+      "debtor": null,
+      "debtor_account": null,
+      "debtor_agent": null,
+      "bank_transaction_code": {
+        "description": "MAKSUPALVELU",
+        "code": null,
+        "sub_code": null
+      },
+      "credit_debit_indicator": "DBIT",
+      "status": "BOOK",
+      "booking_date": "2024-02-01",
+      "value_date": "2024-02-01",
+      "transaction_date": "2024-02-01",
+      "balance_after_transaction": null,
+      "reference_number": "2412258514251",
+      "remittance_information": ["2412258514251"],
+      "debtor_account_additional_identification": null,
+      "creditor_account_additional_identification": null,
+      "exchange_rate": null,
+      "note": null,
+      "transaction_id": null
+    }
+  ],
+  "continuation_key": "eyJwYXJhbXMiOnsiYWNjb3VudElkIjoiQ0FDQyNjZjYyMWY3YjJiYmMzNDk3NTc5MjM5YjdlOWUzNjQyOTQyMTQ2NzkwZmJjZDI4ZDMzMTkxYWE1ZTk0NGVjNDI1IiwiZGF0ZUZyb20iOiIyMDI0LTAxLTAxIiwiZGF0ZVRvIjpudWxsLCJ0cmFuc2FjdGlvblN0YXR1cyI6bnVsbH0sImNvbnRpbnVhdGlvblRva2VuIjoiNWZiNDI4YTM3YTA2NDUzYjg1NmMxMzUzNjZmMWRhMzlhZTAwNDIwY2YyY2RlMDFkYTRkMmZmOGFhYjkyMjA4YTc1ZGM3OWU2YTc0NGMzYTlmNTdlOWIwNzI4Y2U2MTdjZDc5NjFkYzBmOWQ2MWJmZjEzZTU4ZDRjYzRmMTFlMDUifQ==.db157506a21b7347c83b8449e79f4ec4fddb6059f257916b5489de5dfa197b4f"
+}

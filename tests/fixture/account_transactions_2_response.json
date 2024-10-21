@@ -1,0 +1,46 @@
+{
+  "transactions": [
+    {
+      "entry_reference": "202311285FVT00056418",
+      "merchant_category_code": null,
+      "transaction_amount": {
+        "currency": "EUR",
+        "amount": "168.33"
+      },
+      "creditor": {
+        "name": "Pohjola Vakuutus Oy",
+        "postal_address": null,
+        "organisation_id": null,
+        "private_id": null,
+        "contact_details": null
+      },
+      "creditor_account": {
+        "iban": "FI7150000120001820",
+        "other": null
+      },
+      "creditor_agent": null,
+      "debtor": null,
+      "debtor_account": null,
+      "debtor_agent": null,
+      "bank_transaction_code": {
+        "description": "MAKSUPALVELU",
+        "code": null,
+        "sub_code": null
+      },
+      "credit_debit_indicator": "DBIT",
+      "status": "BOOK",
+      "booking_date": "2024-01-02",
+      "value_date": "2024-01-02",
+      "transaction_date": "2024-01-02",
+      "balance_after_transaction": null,
+      "reference_number": "16100570550408",
+      "remittance_information": ["16100570550408"],
+      "debtor_account_additional_identification": null,
+      "creditor_account_additional_identification": null,
+      "exchange_rate": null,
+      "note": null,
+      "transaction_id": null
+    }
+  ],
+  "continuation_key": null
+}
