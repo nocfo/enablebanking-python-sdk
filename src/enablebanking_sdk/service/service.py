@@ -27,7 +27,7 @@ class EnableBankingService:
 
     def get_aspsps(
         self,
-        country: str = "FI",
+        country: str,
         psu_type: PSUType = PSUType.BUSINESS,
     ) -> list[AspspData]:
         response = self.integration.get_aspsps(
