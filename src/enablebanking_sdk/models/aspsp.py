@@ -3,9 +3,8 @@ from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
-from src.constants.psu_type import PSUType
-from src.constants.authentication_approach import AuthenticationApproach
-from src.models.eb_party import PartyIdentification
+from ..constants import PSUType, AuthenticationApproach
+from .eb_party import PartyIdentification
 
 _RE_COMBINE_WHITESPACE = re.compile(r"\s+")
 

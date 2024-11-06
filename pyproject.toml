@@ -1,10 +1,15 @@
 [tool.poetry]
-name = "enable-banking-py"
-version = "0.1.0"
+name = "enablebanking_sdk"
+version = "0.1.1"
 description = ""
 authors = ["NOCFO <team@nocfo.io>"]
 license = "MIT"
 readme = "README.md"
+packages = [{ include = "enablebanking_sdk", from = "src" }]
+
+[project.urls]
+"Homepage" = "https://github.com/nocfo/enablebanking_sdk"
+"Bug Tracker" = "https://github.com/nocfo/enablebanking_sdk/issues"
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -12,7 +17,6 @@ requests = "^2.32.3"
 pyjwt = "^2.9.0"
 pydantic = "^2.9.2"
 cryptography = "^43.0.3"
-
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
@@ -24,3 +28,6 @@ commentjson = "^0.9.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401", "F403"]

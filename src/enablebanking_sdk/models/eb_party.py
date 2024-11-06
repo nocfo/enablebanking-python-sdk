@@ -2,8 +2,7 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
-from src.constants.address_type import AddressType
-from src.constants.scheme_name import SchemeName
+from ..constants import AddressType, SchemeName
 
 
 class PostalAddress(BaseModel):

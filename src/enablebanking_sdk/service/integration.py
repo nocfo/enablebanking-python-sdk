@@ -6,7 +6,7 @@ from requests.exceptions import HTTPError
 import jwt
 import requests
 
-from src.exceptions import EnableBankingException
+from ..exceptions import EnableBankingException
 
 
 logger = logging.getLogger(__name__)

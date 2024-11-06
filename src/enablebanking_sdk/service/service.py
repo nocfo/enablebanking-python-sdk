@@ -2,10 +2,8 @@ from datetime import datetime, timezone, timedelta
 from typing import Optional
 
 
-from src.constants.psu_type import PSUType
-
-
-from src.models.aspsp import (
+from ..constants import PSUType
+from ..models import (
     AspspData,
     EnableBankingStartAuthorizationRequest,
     EnableBankingStartAuthorizationResponse,
@@ -13,9 +11,9 @@ from src.models.aspsp import (
     Transaction,
     AspspsResponse,
     EnableBankingAccess,
+    AccountBalances,
 )
-from src.models.balances import AccountBalances
-from src.service.integration import EnableBankingIntegration
+from .integration import EnableBankingIntegration
 
 
 class EnableBankingService:

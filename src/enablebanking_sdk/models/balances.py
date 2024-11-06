@@ -3,8 +3,8 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
-from src.constants.account_balance_type import AccountBalanceType
-from src.models.aspsp import AmountType
+from ..constants import AccountBalanceType
+from .aspsp import AmountType
 
 
 class BalanceResource(BaseModel):

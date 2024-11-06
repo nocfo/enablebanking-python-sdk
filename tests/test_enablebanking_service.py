@@ -2,10 +2,9 @@ import unittest
 from datetime import date, datetime
 from unittest import mock
 
-from src.constants.psu_type import PSUType
-from src.models.aspsp import AspspData
-from src.service.integration import EnableBankingIntegration
-from src.service.service import EnableBankingService
+from src.enablebanking_sdk.constants import PSUType
+from src.enablebanking_sdk.models import AspspData
+from src.enablebanking_sdk.service import EnableBankingService, EnableBankingIntegration
 from tests.utils import get_json_fixtures
 
 

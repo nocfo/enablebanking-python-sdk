@@ -1,9 +1,8 @@
 import os
 from uuid import uuid4
 
-from src.constants.psu_type import PSUType
-from src.service.integration import EnableBankingIntegration
-from src.service.service import EnableBankingService
+from ..constants import PSUType
+from ..service import EnableBankingService, EnableBankingIntegration
 
 
 EB_BASE_URL = os.getenv("ENABLEBANKING_BASE_URL", "")
