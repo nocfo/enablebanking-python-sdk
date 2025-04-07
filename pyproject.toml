@@ -6,10 +6,7 @@ authors = ["NOCFO <team@nocfo.io>"]
 license = "MIT"
 readme = "README.md"
 packages = [{ include = "enablebanking_sdk", from = "src" }]
-
-[project.urls]
-"Homepage" = "https://github.com/nocfo/enablebanking_sdk"
-"Bug Tracker" = "https://github.com/nocfo/enablebanking_sdk/issues"
+urls = { Homepage = "https://github.com/nocfo/enablebanking_sdk", "Bug Tracker" = "https://github.com/nocfo/enablebanking_sdk/issues" }
 
 [tool.poetry.dependencies]
 python = "^3.11"
