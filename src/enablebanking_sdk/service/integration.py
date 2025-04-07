@@ -6,6 +6,7 @@ from requests.exceptions import HTTPError
 import jwt
 import requests
 
+from ..constants.transaction_fetch_strategy import TransactionsFetchStrategy
 from ..exceptions import EnableBankingException
 
 
@@ -139,6 +140,7 @@ class EnableBankingIntegration:
         account_uid: str,
         date_from: datetime | None = None,
         date_to: datetime | None = None,
+        strategy: TransactionsFetchStrategy | None = None,
         psu_headers: dict | None = None,
         continuation_key: str | None = None,
     ) -> dict:
@@ -152,6 +154,7 @@ class EnableBankingIntegration:
             params={
                 "date_from": _fmt_dt(date_from),
                 "date_to": _fmt_dt(date_to),
+                "strategy": strategy,
                 "continuation_key": continuation_key,
             },
         )
