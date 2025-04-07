@@ -6,7 +6,7 @@ from src.enablebanking_sdk.constants import PSUType
 from src.enablebanking_sdk.constants.transaction_fetch_strategy import (
     TransactionsFetchStrategy,
 )
-from src.enablebanking_sdk.models import AspspData, Transaction
+from src.enablebanking_sdk.models import AspspData
 from src.enablebanking_sdk.service import EnableBankingService, EnableBankingIntegration
 from tests.utils import get_json_fixtures
 
