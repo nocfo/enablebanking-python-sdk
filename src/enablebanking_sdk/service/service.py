@@ -3,6 +3,7 @@ from typing import Optional
 
 
 from ..constants import PSUType
+from ..constants.transaction_fetch_strategy import TransactionsFetchStrategy
 from ..models import (
     AspspData,
     EnableBankingStartAuthorizationRequest,
@@ -79,6 +80,7 @@ class EnableBankingService:
         account_uid: str,
         date_from: Optional[datetime] = None,
         date_to: Optional[datetime] = None,
+        strategy: Optional[TransactionsFetchStrategy] = None,
         psu_headers: Optional[dict] = None,
     ) -> list[Transaction]:
         transactions = []
@@ -89,6 +91,7 @@ class EnableBankingService:
                 account_uid=account_uid,
                 date_from=date_from,
                 date_to=date_to,
+                strategy=strategy,
                 psu_headers=psu_headers,
                 continuation_key=continuation_key,
             )
