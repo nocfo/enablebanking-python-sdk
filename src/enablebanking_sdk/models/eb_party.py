@@ -16,7 +16,7 @@ class PostalAddress(BaseModel):
     town_name: Optional[str] = Field(default=None)
     country_sub_division: Optional[str] = Field(default=None)
     country: Optional[str] = Field(default=None)
-    address_line: Optional[list[str]] = Field(default_factory=list)
+    address_line: list[str] = Field(default_factory=list)
 
 
 class GenericIdentification(BaseModel):
