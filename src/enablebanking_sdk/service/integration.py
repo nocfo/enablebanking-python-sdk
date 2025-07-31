@@ -121,7 +121,7 @@ class EnableBankingIntegration:
             json=request,
         )
 
-    def delete_user_session(self, session_id: str, psu_headers: dict):
+    def delete_user_session(self, session_id: str, psu_headers: dict | None = None):
         return self._request(
             method="DELETE",
             path=f"/sessions/{session_id}",
