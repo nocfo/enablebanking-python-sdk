@@ -1,6 +1,6 @@
 import logging
 from datetime import datetime, timedelta
-from typing import Optional, Tuple
+from typing import Tuple
 from requests.exceptions import HTTPError
 
 import jwt
@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 class EnableBankingIntegration:
     token: str
-    token_expiration: Optional[datetime] = None
+    token_expiration: datetime | None = None
 
     base_url: str
     app_id: str
@@ -144,7 +144,7 @@ class EnableBankingIntegration:
         psu_headers: dict | None = None,
         continuation_key: str | None = None,
     ) -> dict:
-        def _fmt_dt(date: Optional[datetime]) -> Optional[str]:
+        def _fmt_dt(date: datetime | None) -> str | None:
             return date.replace(tzinfo=None).strftime("%Y-%m-%d") if date else None
 
         return self._request(
@@ -162,7 +162,7 @@ class EnableBankingIntegration:
     def get_account_balances(
         self,
         account_uid: str,
-        psu_headers: Optional[dict] = None,
+        psu_headers: dict | None = None,
     ) -> dict:
         return self._request(
             method="GET",
