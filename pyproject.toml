@@ -4,7 +4,7 @@ dynamic = [ "version" ]
 
 [tool.poetry]
 name = "enablebanking_sdk"
-version = "0.1.4"
+version = "0.1.5"
 description = ""
 authors = ["NOCFO <team@nocfo.io>"]
 license = "MIT"
