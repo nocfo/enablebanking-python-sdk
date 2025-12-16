@@ -13,6 +13,7 @@ from ..models import (
     AspspsResponse,
     EnableBankingAccess,
     AccountBalances,
+    EnableBankingAccount,
 )
 from .integration import EnableBankingIntegration
 
@@ -113,3 +114,14 @@ class EnableBankingService:
             psu_headers=psu_headers,
         )
         return AccountBalances.parse_obj(data)
+
+    def get_account_details(
+        self,
+        account_uid: str,
+        psu_headers: Optional[dict] = None,
+    ) -> EnableBankingAccount:
+        data = self.integration.get_account_details(
+            account_uid=account_uid,
+            psu_headers=psu_headers,
+        )
+        return EnableBankingAccount.parse_obj(data)
