@@ -84,6 +84,7 @@ class EnableBankingAccount(BaseModel):
     cash_account_type: str
     account_id: Optional[EnableBankingAccountIdentification] = Field(default=None)
     name: Optional[str] = Field(default=None)
+    details: Optional[str] = Field(default=None)
 
 
 class EnableBankingAuthorizeSessionResponse(BaseModel):

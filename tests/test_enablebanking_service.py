@@ -111,3 +111,16 @@ class EnableBankingServiceTest(unittest.TestCase):
         self.assertEqual(len(data.balances), 2)
         self.assertEqual(data.balances[0].balance_amount.amount, 2107.45)
         self.assertEqual(data.balances[0].balance_amount.currency, "EUR")
+
+    @mock.patch.object(EnableBankingIntegration, "_request")
+    def test_get_account_details(self, request_mock):
+        request_mock.side_effect = get_json_fixtures(
+            "account_details_response.json",
+        )
+
+        data = self.service.get_account_details(
+            "account_uid",
+            psu_headers={"test_header": "test_value"},
+        )
+
+        self.assertEqual(data.details, "My account nickname")

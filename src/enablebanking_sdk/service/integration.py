@@ -169,3 +169,14 @@ class EnableBankingIntegration:
             path=f"/accounts/{account_uid}/balances",
             headers=psu_headers,
         )
+
+    def get_account_details(
+        self,
+        account_uid: str,
+        psu_headers: dict | None = None,
+    ) -> dict:
+        return self._request(
+            method="GET",
+            path=f"/accounts/{account_uid}/details",
+            headers=psu_headers,
+        )
