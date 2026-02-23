@@ -15,9 +15,8 @@ urls = { Homepage = "https://github.com/nocfo/enablebanking_sdk", "Bug Tracker" 
 [tool.poetry.dependencies]
 python = "^3.11"
 requests = "^2.32.3"
-pyjwt = "^2.9.0"
+pyjwt = {version = "^2.9.0", extras = ["crypto"]}
 pydantic = "^2.9.2"
-cryptography = "^44.0.1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
