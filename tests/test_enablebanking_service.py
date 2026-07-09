@@ -2,10 +2,13 @@ import unittest
 from datetime import date, datetime
 from unittest import mock
 
+import requests
+
 from src.enablebanking_sdk.constants import PSUType
 from src.enablebanking_sdk.constants.transaction_fetch_strategy import (
     TransactionsFetchStrategy,
 )
+from src.enablebanking_sdk.exceptions import EnableBankingException
 from src.enablebanking_sdk.models import AspspData
 from src.enablebanking_sdk.service import EnableBankingService, EnableBankingIntegration
 from tests.utils import get_json_fixtures
@@ -124,3 +127,38 @@ class EnableBankingServiceTest(unittest.TestCase):
         )
 
         self.assertEqual(data.details, "My account nickname")
+
+    @mock.patch.object(
+        EnableBankingIntegration, "_get_token", return_value="mock-token"
+    )
+    @mock.patch("src.enablebanking_sdk.service.integration.requests.request")
+    def test_request_wraps_non_json_body_as_enablebanking_exception(
+        self, request_mock, _token_mock
+    ):
+        response = requests.Response()
+        response.status_code = 200
+        response._content = b""  # empty body -> response.json() raises JSONDecodeError
+        request_mock.return_value = response
+
+        with self.assertRaises(EnableBankingException) as ctx:
+            self.service.integration._request(method="GET", path="/accounts/x/balances")
+
+        # The originating response is attached so callers can still inspect the status code.
+        self.assertEqual(ctx.exception.response.status_code, 200)
+
+    @mock.patch.object(
+        EnableBankingIntegration, "_get_token", return_value="mock-token"
+    )
+    @mock.patch("src.enablebanking_sdk.service.integration.requests.request")
+    def test_request_wraps_http_error_as_enablebanking_exception(
+        self, request_mock, _token_mock
+    ):
+        response = requests.Response()
+        response.status_code = 500
+        response._content = b"Internal Server Error"
+        request_mock.return_value = response
+
+        with self.assertRaises(EnableBankingException) as ctx:
+            self.service.integration._request(method="GET", path="/accounts/x/balances")
+
+        self.assertEqual(ctx.exception.response.status_code, 500)

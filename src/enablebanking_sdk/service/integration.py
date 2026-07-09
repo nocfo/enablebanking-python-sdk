@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime, timedelta
 from typing import Tuple
-from requests.exceptions import HTTPError
+from requests.exceptions import HTTPError, JSONDecodeError
 
 import jwt
 import requests
@@ -102,6 +102,17 @@ class EnableBankingIntegration:
                 err,
                 request=err.request,
                 response=err.response,
+            ) from err
+
+        except JSONDecodeError as err:
+            # A successful status code with a non-JSON body (e.g. an empty 200
+            # response) still leaves callers with nothing usable. Surface it as an
+            # EnableBankingException so it is handled like any other request failure
+            # instead of leaking a raw JSONDecodeError.
+            raise EnableBankingException(
+                err,
+                request=response.request,
+                response=response,
             ) from err
 
     def get_aspsps(self, country: str, psu_type: str) -> dict:
